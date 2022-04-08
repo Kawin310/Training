@@ -60,7 +60,7 @@ public class Customer {
 		}
 		else {
 			
-		 throw new InvalidEmailException("Error");
+		 throw new InvalidEmailException("---101 Error");
 		}
 		
 	}
