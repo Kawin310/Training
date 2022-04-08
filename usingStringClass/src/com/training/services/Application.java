@@ -6,6 +6,7 @@ public class Application {
 		// TODO Auto-generated method stub
       int key=13;
       StringService service=new StringService();
+      System.out.println(String.format("%3$.4f %2$.3f %1$.2f",100.45,200.76,444.33,321.3,344.3));
       switch (key) {
 	case 1:
 		service.stringEquals("ram", "ram");
@@ -57,5 +58,4 @@ public class Application {
 	}
       
 	}
-
 }
