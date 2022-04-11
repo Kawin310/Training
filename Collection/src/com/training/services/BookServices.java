@@ -52,4 +52,19 @@ public class BookServices implements CrudRepositiory {
 		// TODO Auto-generated method stub
 		return this.booklist;
 	}
+@Override
+		public Book update(Book oldbook, Book recentBook)
+		{
+			// TODO Auto-generated method stub
+			if(this.booklist.contains(oldbook))
+				
+			{
+				int idxPos=this.booklist.indexOf(oldbook);
+				this.booklist.set(idxPos, recentBook);
+			}
+			
+			return recentBook;
+		}
+
 }
+

@@ -8,6 +8,8 @@ public interface CrudRepositiory {
 	public Book finById(int id);
 	public boolean removeBook(Book book);
 	public List<Book> findAll();
+	public Book update(Book book,Book recentBook);
+	
 	
 
 }

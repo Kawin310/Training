@@ -1,26 +1,43 @@
 package com.training;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import com.training.ifaces.CrudRepositiory;
 import com.training.model.Book;
 import com.training.services.BookServices;
+import com.training.utils.BookNameComparator;
 
-public class Application {
+public class App {
 
-	public static void print(List<Book> args)
+	
+	
+	public static void print(Collection<Book> args)
 	{
 		for(Book eachBook:args)
 		{
 			System.out.println(eachBook);
 			
-
-
 		}
 
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+
+		List<String> names=new ArrayList<>();
+		
+		names.add("Ramesh");
+		names.add("Anand");
+		names.add("Chandru");
+		names.add("Zahir");
+		names.add("Pavan");
+
+		System.out.println(names);
+		Collections.sort(names);
+		System.out.println(names);
+		
 
 		  Book java=new Book(101,"java","Kawin",450);
 		  Book spring=new Book(102,"spring","Mad",550);
@@ -37,23 +54,13 @@ public class Application {
 			 System.out.println( service.add(python));	
 		 
 		List<Book> bookList=service.findAll(); 
+		Collections.sort(bookList);
+		System.out.println(bookList);
+		BookNameComparator name=new BookNameComparator();
+		Collections.sort(bookList, name);
+		System.out.println("_______");
 		print(bookList);
-		
-		System.out.println("_____");
-		
-		
-		Book books=service.finById(101);
-		System.out.println(books);
-		
-		Book react=new Book(205,"Reactjs","Rahul",6850);
-		Book reactNew=new Book(205,"Reactjs","Rahul.M",7850);
-
-		service.update(react, reactNew);
-		//service.update(react);
-		System.out.println("After Update");
-		print(service.findAll());
-		
-		
+          
 	}
 
 }
