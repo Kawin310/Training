@@ -1,6 +1,8 @@
 package com.training.services;
 
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.ArrayList;
 import com.training.ifaces.CrudRepositiory;
 import com.training.model.Book;
@@ -66,5 +68,22 @@ public class BookServices implements CrudRepositiory {
 			return recentBook;
 		}
 
+public List<Book>getBooksGrtThan(double price)
+{
+	List<Book>list=new ArrayList<>();
+	Predicate<Double>grtThan=(value)-> value>price;
+	//Consumer<Predicate<T>>
+	this.booklist.forEach(book->
+	{
+		Double bookPrice=book.getPrice();
+		if(grtThan.test(bookPrice))
+		{
+			list.add(book);
+		}
+		
+	});
+	return list;
+	
 }
 
+}

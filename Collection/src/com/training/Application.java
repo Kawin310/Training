@@ -10,18 +10,18 @@ public class Application {
 
 	public static void print(List<Book> args)
 	{
-		for(Book eachBook:args)
-		{
-			System.out.println(eachBook);
-			
-
-
-		}
+//		for(Book eachBook:args)
+//		{
+//			System.out.println(eachBook);
+//
+//
+//		}
+		args.forEach(System.out::println);
 
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		
 		  Book java=new Book(101,"java","Kawin",450);
 		  Book spring=new Book(102,"spring","Mad",550);
 		  Book maven=new Book(103,"maven","Harish",650);
@@ -53,6 +53,9 @@ public class Application {
 		System.out.println("After Update");
 		print(service.findAll());
 		
+		System.out.println("_______________");
+		List<Book>list3=((BookServices)service).getBooksGrtThan(600);
+		list3.forEach(System.out::println);
 		
 	}
 
