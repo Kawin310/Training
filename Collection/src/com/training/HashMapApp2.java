@@ -30,10 +30,12 @@ public class HashMapApp2 {
 
       Set<Integer>keys=map.keySet();
       System.out.println(keys);
+      
       for(Integer key:keys)
       {
     	  System.out.println(map.get(key));
       }
+      
       System.out.println("________________");
       
       Collection<Student>list=map.values();
@@ -50,6 +52,7 @@ public class HashMapApp2 {
     	  System.out.println(eachEntry.getKey());
     	  System.out.println(eachEntry.getValue());
       }
+      
 	}
 
 }

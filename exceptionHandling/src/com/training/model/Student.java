@@ -16,7 +16,7 @@ public class Student {
 		super();
 		if(markScored<0)
 		{
-			
+			 
 				throw new RangeCheckException("Mark should be positive integer");
 		
 			

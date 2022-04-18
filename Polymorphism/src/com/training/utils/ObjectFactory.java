@@ -34,5 +34,9 @@ public class ObjectFactory {
 		}
 		return travelAllowance;
 	}
+	public int value(int i)
+	{
+		return 100*i;
+	}
 
 }

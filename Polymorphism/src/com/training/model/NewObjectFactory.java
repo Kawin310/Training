@@ -8,8 +8,8 @@ public class NewObjectFactory extends ObjectFactory {
 	@Override
 	public Conditional getConditional(int key) {
 		// TODO Auto-generated method stub
-		
 		Object obj = null;
+		
 	if(key<=2)
 	{
 		obj=super.getConditional(key);
@@ -19,7 +19,6 @@ public class NewObjectFactory extends ObjectFactory {
 	{
 		
 		obj=  new Principal();
-
 	}
 		return (Conditional) obj;
 		

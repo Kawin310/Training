@@ -8,6 +8,7 @@ import java.util.List;
 import com.training.ifaces.CrudRepositiory;
 import com.training.model.Book;
 import com.training.services.BookServices;
+//import com.training.utils.Author;
 import com.training.utils.BookNameComparator;
 
 public class App {
@@ -46,19 +47,33 @@ public class App {
 		  Book python=new Book(105,"Python","Sathya",850);
 		  
 		  CrudRepositiory service=new BookServices();
-		  
+		//  bb.add(java);
 			 System.out.println("Is added :" +service.add(java));
 			 System.out.println( service.add(spring));
 			 System.out.println( service.add(maven));
 			 System.out.println( service.add(html));
 			 System.out.println( service.add(python));	
 		 
+			// List<Book>kgf=new ArrayList<>();
+			// kgf=service.findAll();
+			 
 		List<Book> bookList=service.findAll(); 
+		
+		
 		Collections.sort(bookList);
 		System.out.println(bookList);
+		//Author author=new Author();
 		BookNameComparator name=new BookNameComparator();
-		Collections.sort(bookList, name);
+		//jj h=new jj();
+		Collections.sort(bookList, new BookNameComparator());
+		//Collections.sort(bookList, author);
+
+		
+		//Collections.sort(bookList, h);
+
+		
 		System.out.println("_______");
+		
 		print(bookList);
           
 	}

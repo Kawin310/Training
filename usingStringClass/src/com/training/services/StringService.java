@@ -3,6 +3,8 @@ package com.training.services;
 public class StringService {
 
 	
+	//String s="ram";
+	//String k="ram";
 	public void stringEquals(String str1,String str2)
 	{
 		

@@ -16,7 +16,7 @@ public class Application {
 		kawin = new Student(101,"kawin",-98);
 	} catch (RangeCheckException e1) {
 		// TODO Auto-generated catch block
-		//e1.printStackTrace();
+		e1.printStackTrace();
 	}
       StudentService service=new StudentService(kawin);
       System.out.println(service.printDetails());

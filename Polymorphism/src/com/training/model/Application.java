@@ -10,6 +10,11 @@ public class Application {
 		ObjectFactory factory=new ObjectFactory();
 		Conditional object= factory.getConditional(1);
 		Conditional object1= factory.getConditional(2);
+		
+//        Conditional kawi=new Professor();
+//        Conditional gg=new Student();
+        
+        
         
 		System.out.println(object.test("chennai"));
 		System.out.println(factory.getValue(object, "chennai"));
@@ -19,7 +24,10 @@ public class Application {
 		Conditional con=newObj.getConditional(3);
 		System.out.println(con.test("chennai"));
 		//newObj.ji();
-		System.out.println(		factory.getValue(con, "chennai"));
+		System.out.println(factory.getValue(con, "chennai"));
+		//factory.fg(kawi);
+	    int i=factory.value(20);
+		System.out.println(i);
 
 		
 	}

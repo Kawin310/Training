@@ -1,5 +1,6 @@
 package com.training.services;
 
+import static java.util.stream.Collectors.*;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -68,11 +69,24 @@ public class BookServices implements CrudRepositiory {
 			return recentBook;
 		}
 
+
+public List<Book>findBooksGrtThan(double price)
+{
+	return this.booklist
+	.stream()
+	.filter( (e)->e.getPrice()>price).collect(toList());	
+}
+
+
 public List<Book>getBooksGrtThan(double price)
 {
 	List<Book>list=new ArrayList<>();
 	Predicate<Double>grtThan=(value)-> value>price;
 	//Consumer<Predicate<T>>
+	
+	
+	
+	
 	this.booklist.forEach(book->
 	{
 		Double bookPrice=book.getPrice();
