@@ -65,7 +65,7 @@ public class App {
 		//Author author=new Author();
 		BookNameComparator name=new BookNameComparator();
 		//jj h=new jj();
-		Collections.sort(bookList, new BookNameComparator());
+		Collections.sort(bookList, name);
 		//Collections.sort(bookList, author);
 
 		

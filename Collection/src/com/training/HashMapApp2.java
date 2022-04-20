@@ -49,6 +49,7 @@ public class HashMapApp2 {
       
       for(Map.Entry<Integer,Student> eachEntry:list2)//To get both the vlaue and key 
       {
+    	  
     	  System.out.println(eachEntry.getKey());
     	  System.out.println(eachEntry.getValue());
       }

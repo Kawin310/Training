@@ -1,15 +1,24 @@
 package com.training.model;
 
+import java.util.logging.Logger;
+
+//import com.example.model.Book;
+
 public class Book implements Comparable<Book> {
 	
+	//public static Object log;
 	private int bookNumber;
 	private String bookName;
 	private String author;
 	private double price;
+	public static Logger log=Logger.getLogger(Book.class.getName());
+
 	
 	public Book() {
 		super();
 		// TODO Auto-generated constructor stub
+		log.info("Book with 0 argument");
+
 	}
 	
 	public Book(int bookNumber, String bookName, String author, double price) {
@@ -54,8 +63,8 @@ public class Book implements Comparable<Book> {
 	@Override
 	public int compareTo(Book otherObj) {
 		// TODO Auto-generated method stub
-	if(otherObj.bookNumber<this.bookNumber)return-1;
-	if(otherObj.bookNumber>this.bookNumber)return 1;
+	if(otherObj.bookNumber<this.bookNumber)return 1;
+	if(otherObj.bookNumber>this.bookNumber)return -1;
 	return 0;
 	}
 	

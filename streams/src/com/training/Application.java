@@ -63,6 +63,25 @@ public class Application {
 		
 	((BookServices)service).findBooksGrtThan(100).forEach(System.out::println);
 	System.out.println("++++++++++++++++++++++++");
+	
+	
+	List<String>nameList=((BookServices)service).getBookName();
+	
+	nameList.forEach(System.out::println);
+	System.out.println("+++++++++++++++++++++++");
+	
+       List<String>grtThan900=((BookServices)service).getBookNameGrtThanPrice(800);
+	
+     grtThan900.forEach(System.out::println);
+ 	System.out.println("+++++++++++++++++++++++");
+
+     List<Book>sortedByName=((BookServices)service).sortedByName();
+     sortedByName.forEach(System.out::println);
+  	System.out.println("+++++++++++++++++++++++");
+
+     List<Book>sortedByNamereverse=((BookServices)service).sortedByBookNames();
+     sortedByNamereverse.forEach(System.out::println);
+
 		
 	}
 

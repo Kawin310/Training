@@ -24,9 +24,6 @@ public class TreeSetApplication {
        for (Student student : set) 
        {
     	   System.out.println(student.getFirstName());
-	
-       }
- 
+	      }
 	}
-
 }

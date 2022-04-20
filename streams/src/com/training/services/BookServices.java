@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.ArrayList;
+import java.util.Comparator;
+
 import com.training.ifaces.CrudRepositiory;
 import com.training.model.Book;
 import com.training.ifaces.CrudRepositiory;
@@ -28,6 +30,7 @@ public class BookServices implements CrudRepositiory {
 		}
 			return value;
 	}
+	
 	@Override
 	public boolean add(Book book) {
 		// TODO Auto-generated method stub
@@ -68,8 +71,6 @@ public class BookServices implements CrudRepositiory {
 			
 			return recentBook;
 		}
-
-
 public List<Book>findBooksGrtThan(double price)
 {
 	return this.booklist
@@ -77,16 +78,45 @@ public List<Book>findBooksGrtThan(double price)
 	.filter( (e)->e.getPrice()>price).collect(toList());	
 }
 
+public List<String>getBookName()
+{
+	return this.booklist.stream().map(e->e.getBookName()).collect(toList());
+		
+}
+
+public List<String>getBookNameGrtThanPrice(double price)
+{
+	
+	return this.booklist.stream().filter((e)->e.getPrice()>price)
+			.map(e->e.getBookName())
+			.collect(toList());
+	
+}
+public List<Book>sortedByName()
+{
+
+	return this.booklist.stream()
+			.sorted(Comparator.comparing(Book::getBookName))
+			.collect(toList());
+	
+	
+}
+
+public List<Book>sortedByBookNames()
+{
+	
+	return this.booklist.stream()
+			.sorted(Comparator.reverseOrder())
+			.collect(toList());
+	
+	
+}
 
 public List<Book>getBooksGrtThan(double price)
 {
 	List<Book>list=new ArrayList<>();
 	Predicate<Double>grtThan=(value)-> value>price;
 	//Consumer<Predicate<T>>
-	
-	
-	
-	
 	this.booklist.forEach(book->
 	{
 		Double bookPrice=book.getPrice();
