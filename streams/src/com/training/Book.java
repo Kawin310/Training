@@ -1,4 +1,4 @@
-package com.training.model;
+package com.training;
 
 import java.util.logging.Logger;
 
