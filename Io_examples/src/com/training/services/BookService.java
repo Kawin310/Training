@@ -5,9 +5,9 @@ import java.util.List;
 
 import com.training.model.Book;
 
-public class BookService {
+public class BookService{
 
-	public Object readFromStream(File file)
+	public Object readFromStream(File file) 
 	{
 		Object obj=null;
 		
@@ -17,22 +17,16 @@ public class BookService {
 		obj=objectInputStream.readObject();
 			
 		}
-	
 	 catch(IOException | ClassNotFoundException e)
 		{
 			e.printStackTrace();
+		
 		}
 		
 		return obj;
-		
-		
-		
-		
-		
 	}
 	
-	
-	
+
 	public boolean writeToStream(File file,Book book){
 		
 		boolean count=false;
@@ -85,8 +79,7 @@ public class BookService {
 				
 		Book book=new Book(Integer.parseInt(values[0]),values[1],
 				values[2],Double.parseDouble(values[3]));
-				bookList.add(book);
-				
+				bookList.add(book);		
 		}
 		}
 		catch(IOException e)
@@ -94,8 +87,7 @@ public class BookService {
 			e.printStackTrace();
 		}
 		
-		return bookList;
-		
+		return bookList;	
 	}
 	
 }

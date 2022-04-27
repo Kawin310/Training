@@ -1,11 +1,17 @@
 package com.training.model;
 
+import java.io.Serializable;
 import java.util.logging.Logger;
 
 //import com.example.model.Book;
 
-public class Book implements Comparable<Book> {
+public class Book implements Comparable<Book> , Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2022L;
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -50,8 +56,18 @@ public class Book implements Comparable<Book> {
 	private String bookName;
 	private String author;
 	private double price;
-	public static Logger log=Logger.getLogger(Book.class.getName());
+	private double discount;
+	
+	public Book(int bookNumber, String bookName, String author, double price, double discount) {
+		super();
+		this.bookNumber = bookNumber;
+		this.bookName = bookName;
+		this.author = author;
+		this.price = price;
+		this.discount = discount;
+	}
 
+	public static Logger log=Logger.getLogger(Book.class.getName());
 	
 	public Book() {
 		super();
@@ -105,7 +121,4 @@ public class Book implements Comparable<Book> {
 	if(otherObj.bookNumber>this.bookNumber)return -1;
 	return 0;
 	}
-	
-	
-
 }
