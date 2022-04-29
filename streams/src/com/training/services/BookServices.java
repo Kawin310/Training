@@ -29,8 +29,7 @@ public class BookServices implements CrudRepositiory {
 			}
 		}
 			return value;
-	}
-	
+}
 	@Override
 	public boolean add(Book book) {
 		// TODO Auto-generated method stub
@@ -63,12 +62,10 @@ public class BookServices implements CrudRepositiory {
 		{
 			// TODO Auto-generated method stub
 			if(this.booklist.contains(oldbook))
-				
 			{
 				int idxPos=this.booklist.indexOf(oldbook);
 				this.booklist.set(idxPos, recentBook);
 			}
-			
 			return recentBook;
 		}
 public List<Book>findBooksGrtThan(double price)
@@ -77,20 +74,16 @@ public List<Book>findBooksGrtThan(double price)
 	.stream()
 	.filter( (e)->e.getPrice()>price).collect(toList());	
 }
-
 public List<String>getBookName()
 {
 	return this.booklist.stream().map(e->e.getBookName()).collect(toList());
 		
 }
-
 public List<String>getBookNameGrtThanPrice(double price)
 {
-	
 	return this.booklist.stream().filter((e)->e.getPrice()>price)
 			.map(e->e.getBookName())
 			.collect(toList());
-	
 }
 public List<Book>sortedByName()
 {
@@ -98,8 +91,7 @@ public List<Book>sortedByName()
 	return this.booklist.stream()
 			.sorted(Comparator.comparing(Book::getBookName))
 			.collect(toList());
-	
-	
+		
 }
 
 public List<Book>sortedByBookNames()
@@ -108,8 +100,7 @@ public List<Book>sortedByBookNames()
 	return this.booklist.stream()
 			.sorted(Comparator.reverseOrder())
 			.collect(toList());
-	
-	
+
 }
 
 public List<Book>getBooksGrtThan(double price)
@@ -123,11 +114,9 @@ public List<Book>getBooksGrtThan(double price)
 		if(grtThan.test(bookPrice))
 		{
 			list.add(book);
-		}
-		
+		}	
 	});
 	return list;
-	
 }
-
 }
+				

@@ -27,11 +27,11 @@ public class Application {
 	       System.out.println("*********************");
           Optional<Product>cut=ser.findById(11);
           if(cut.isPresent()) 
-          {  	  
+               {  	  
                System.out.println(cut.get());
-      
                     }
-          else {
+          else 
+          {
         	  System.out.println("product with given id is not present");
           }
        System.out.println("*********************");
