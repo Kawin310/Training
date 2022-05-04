@@ -50,7 +50,7 @@ class Occurrence{
 			}	
 			}
 			 //Map<Integer,Set<Integer>> name;
-//	        System.out.println(k+" Index "+aa.toString());
+         //	System.out.println(k+" Index "+aa.toString());
 			//System.out.print("Occurrence "+k+"==" +count+"\n");
 			
 		}
@@ -60,9 +60,7 @@ class Occurrence{
 		for (Map.Entry<Integer,Set<Integer>> entry : name.entrySet())
 			           System.out.println( entry.getKey() +
                              ", Index = " + entry.getValue());
-            
-			
-		
+            	
 		System.out.println("-------------");
            //ab.forEach(System.out::println);
 		
@@ -71,5 +69,3 @@ class Occurrence{
 	
 }
 	
-	
-
