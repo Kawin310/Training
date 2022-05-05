@@ -10,6 +10,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class StreamService {
 
@@ -36,7 +38,7 @@ public class StreamService {
     		   
     		   String country=rs.getString("Country");
     		   String place=rs.getString("place");
-                long population=rs.getLong(" population");
+                long population=rs.getLong("population");
                 SourceApp source=new SourceApp(country,place,population);
                 newlist.add(source);
               //  System.out.println(newlist);
@@ -66,18 +68,29 @@ public class StreamService {
 	public void findPopulation(String popu,List<SourceApp>lists)
 	
 	{
+		long sum=0;
 		List<Long> res=lists.stream().filter(e->e.getCountry().equals(popu))
 				.map((e)->e.getPopulation()).collect(toList());
 		
+				for(long l:res)
+				{
+					sum+=l;
+				}
 				
-				
-				System.out.println(res);
+				System.out.println(sum);
 	}
 	
 	public void findCity(String city,List<SourceApp>lists) {
 		
-		//Map<Integer,String>map=lists.stream().map((e)->e.getCountry()).collect();
-			//map.forEach((key,value)->System.out.println(key+","+value));	
+//	Map<String,String>map=lists.stream()
+//			.map((e)->e.getCountry().equals(city))
+//	.collect(toMap(SourceApp::getCountry,SourceApp::getPlace)));
+//			map.forEach((key,value)->System.out.println(key+","+value));
+		long res=lists.stream().filter(e->e.getCountry().equalsIgnoreCase(city))
+				.count();				
+		System.out.println(res);
+				//.map((e)->e.getPopulation()).collect(toList());
+
 	}
 
 	

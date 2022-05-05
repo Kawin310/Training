@@ -19,11 +19,18 @@ public class App {
 			
 			StreamService service=new StreamService(con);
 			//SourceApp app=new SourceApp("kawin","rishh",997897);
-			System.out.println(service.data());
+			//System.out.println(service.data());
 			List<SourceApp>source=service.data();
+			System.out.println("**********");
 			source.forEach(System.out::println);
-			service.findByPlace("usa",source);
+			System.out.println("**********");
+
+			System.out.println(service.findByPlace("usa",source));
+			System.out.println("**********");
+
 			service.findPopulation("usa", source);
+			System.out.println("**********");
+
 			service.findCity("usa", source);
 			
 			
