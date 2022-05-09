@@ -44,5 +44,4 @@ public class AppConfig {
 	{
 		return new Customer(204,"rajesh");
 	}
-	
 	}
