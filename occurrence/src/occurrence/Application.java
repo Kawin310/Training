@@ -26,7 +26,7 @@ class Occurrence{
      
 	//ArrayList<Integer>god=Arrays.asList(1,5,2,1,2,6,7,1);
 	Set<Integer>aa;
-	Set<Integer>ab;
+	//Set<Integer>ab;
 	Map<Integer,Set<Integer>> name=new HashMap<>();
 	
 	public void toFind()
@@ -49,7 +49,7 @@ class Occurrence{
 
 			}	
 			}
-			 //Map<Integer,Set<Integer>> name;
+		//Map<Integer,Set<Integer>> name;
          //	System.out.println(k+" Index "+aa.toString());
 			//System.out.print("Occurrence "+k+"==" +count+"\n");
 			
