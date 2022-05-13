@@ -8,12 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>${command}</h1>
+
 <form:form method="post">
 
 <label>Product Id</label>
 <input type="number" name="id">
-<input type="submit" value="search">
+<input type="submit" value="Delete">
 
 </form:form>
 
