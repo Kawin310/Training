@@ -50,6 +50,7 @@
 	</dependencyManagement>
 
 	<build>
+	<finalName>Client-one</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
