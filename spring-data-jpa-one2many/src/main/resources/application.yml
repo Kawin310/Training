@@ -1,6 +1,6 @@
 spring:   
   datasource:
-    url: jdbc:oracle:thin:@10.90.1.105:1521/DEV
+    url: jdbc:oracle:thin:@10.90.1.107:1521/SIT
     username: HR
     password: HR
   jpa:

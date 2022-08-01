@@ -12,4 +12,4 @@ public class SpringRestWithCacheApplication {
 		SpringApplication.run(SpringRestWithCacheApplication.class, args);
 		
 	}
-}
+}       
