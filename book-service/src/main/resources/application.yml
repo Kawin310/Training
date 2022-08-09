@@ -1,0 +1,10 @@
+server:
+  port: 3030
+
+
+spring:
+  config:
+    import: configserver:http://localhost:8888
+  application:
+    name: book-service
+
