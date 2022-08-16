@@ -1,6 +1,5 @@
 package com.example.demo.handlers;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
