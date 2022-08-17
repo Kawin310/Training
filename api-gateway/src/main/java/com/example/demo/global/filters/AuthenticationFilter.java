@@ -16,7 +16,7 @@ public  class AuthenticationFilter implements GlobalFilter {
 	boolean result=	exchange.getRequest().getURI().getRawPath().contains("drivers");
 		if(result)
 		{
-			exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+			exchange.getResponse().setStatusCode(HttpStatus.ACCEPTED);
 			
 			return exchange.getResponse().setComplete();
 		}	
