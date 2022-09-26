@@ -1,4 +1,4 @@
-package com.training;
+ package com.training;
 import java.util.function.*;
 import java.util.*;
 public class UsingPredicate {
@@ -18,7 +18,7 @@ public class UsingPredicate {
 			}
 		};
 		names.forEach(consumer);
-		
+		                                                                                                           
 	}
 
 }

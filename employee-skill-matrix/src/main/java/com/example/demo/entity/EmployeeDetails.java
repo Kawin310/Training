@@ -36,6 +36,6 @@ public class EmployeeDetails {
 	
 	@DateTimeFormat(iso = ISO.DATE)
 	@Column(name= "emp_doj")
-     LocalDate empDoj;
+    LocalDate empDoj;
 	
 }

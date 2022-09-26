@@ -70,6 +70,8 @@ public class BookServices implements CrudRepositiory {
 
 public List<Book>getBooksGrtThan(double price)
 {
+	
+	
 	List<Book>list=new ArrayList<>();
 	Predicate<Double>grtThan=(value)-> value>price;
 	//Consumer<Predicate<T>>

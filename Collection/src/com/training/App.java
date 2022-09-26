@@ -12,8 +12,6 @@ import com.training.services.BookServices;
 import com.training.utils.BookNameComparator;
 
 public class App {
-
-	
 	
 	public static void print(Collection<Book> args)
 	{

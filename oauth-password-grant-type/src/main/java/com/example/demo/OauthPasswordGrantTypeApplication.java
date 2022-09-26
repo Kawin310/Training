@@ -28,4 +28,4 @@ public class OauthPasswordGrantTypeApplication {
 		return new BCryptPasswordEncoder();
 	}
 	
-}
+}	
